@@ -1,0 +1,470 @@
+(Sys.time()-62*3600)
+tRecalc <- cxTrading::tradingSessions("ES", range(txn$t, (Sys.time()-62*3600) + 5 * 24 * 3600))[,1]
+tRecalc
+tRecalc[1:(matchSmaller((Sys.time()-62*3600) + 2 * 3600, tRecalc) + 1)]
+strategy <- 'bfc('ES',,,,,entry=0.6,stop=0.3,lb=3'
+strategy <- "bfc('ES',,,,,entry=0.6,stop=0.3,lb=3)"
+tRecalc
+tRecalc[1:(matchSmaller((Sys.time()-62*3600) + 2 * 3600, tRecalc) + 1)]
+tRecalc<- tRecalc[1:(matchSmaller((Sys.time()-62*3600) + 2 * 3600, tRecalc) + 1)]
+referenceRangeOfStrategy(tail(tRecalc, 1), strategy)
+referenceRangeOfStrategy(tail(tRecalc, 1), factor(strategy))
+referenceRangeOfStrategy(tRecalc[length(tRecalc)], factor(strategy))
+referenceRangeOfStrategy(tRecalc[length(tRecalc)-1], factor(strategy))
+referenceRangeOfStrategy(tRecalc[length(tRecalc)-5], factor(strategy))
+referenceRangeOfStrategy(tRecalc[length(tRecalc)-2], factor(strategy))
+referenceRangeOfStrategy(tRecalc[length(tRecalc)-10], factor(strategy))
+referenceRangeOfStrategy(tRecalc[length(tRecalc)-4], factor(strategy))
+referenceRangeOfStrategy(tRecalc[length(tRecalc)-5], factor(strategy))
+referenceRangeOfStrategy(tRecalc[length(tRecalc)-3], factor(strategy))
+referenceRangeOfStrategy(tRecalc[length(tRecalc)], factor(strategy))
+tRecalc
+referenceRangeOfStrategy(tRecalc[length(tRecalc)-1], factor(strategy))
+strategy <- factor(strategy)
+strategy
+t
+referenceRangeOfStrategy(tRecalc[length(tRecalc)-1], factor(strategy))
+tRecalc[length(tRecalc)-1]
+tRecalc[length(tRecalc)]
+tRecalc
+pmax(c(1:10), 9)
+tRecalc <- cxTrading::tradingSessions("ES", range(Sys.time() + 5 * 24 * 3600))[,1]
+tRecalc <- cxTrading::tradingSessions("ES", range(Sys.time() + 5 * 24 * 3600)[,1]
+cxTrading::tradingSessions("ES", range(Sys.time() + 5 * 24 * 3600)
+)
+system.file("selectionAllocation.R", mustWork = TRUE, package = "shortTermTrading")
+?system.file
+library(cxTrading)
+aggregateMacxRedMarketData()
+0.002 * 100
+library(cxTrading)
+install.packages("pxR")
+library(pxR)
+parti <- structure(#
+  c(0.48, 0.07, -0.75, 0.79, 0.48, 0.4, -0.72, 0.28, 0.6, -1.1, -0.7, -0.92, -1.12, -1.1), #
+  names = c('PLR', 'PDC', 'PS', 'UDC', 'PLS', 'PEV', 'PCS', 'PVL', 'PBD', 'PST', 'PES', 'UDF', 'Lega', 'MCR'))
+parti
+qplot(parti)
+library(ggplot2)
+qplot(parti)
+ggplot(data = parti)
+ggplot2(data = parti)
+ggplot(data = parti)
+ggplot(data = parti) + geom_point(parti)
+parti
+plot(parti)
+scale (parti)
+df <- data.frame(x = parti, y = 0.1, names = names(parti))
+qplot(df)
+ggplot(data = df) + geom_point(aes(x, y))
+?geom_test
+?geom_text
+ggplot(data = df) + geom_point(aes(x, y, label = names))
+ggplot(data = df) + geom_text(aes(x, y, label = names))
+ggplot(data = df) + geom_text(aes(x, y, label = names), angle = 90)
+ggplot(data = df) + geom_text(aes(x, y, label = names), angle = 90, alpha = 0.1)
+ggplot(data = df) + geom_text(aes(x, y, label = names), angle = 90, alpha = 0.8)
+theme_set(theme_bw(24))
+ggplot(data = df) + geom_text(aes(x, y, label = names), angle = 90, alpha = 0.8)
+?theme_set
+theme_set(theme_bw())
+ggplot(data = df) + geom_text(aes(x, y, label = names), angle = 90, alpha = 0.8)
+ggplot(data = df) + geom_text(aes(x, y, label = names), angle = 90, alpha = 0.8) + ylab("")
+?opts
+?t
+ggplot(data = df) + geom_text(aes(x, y, label = names), angle = 90, alpha = 0.8) + ylab("") + scale_y_discrete(breaks=NULL)
+library(ggplot2)#
+toLongNames <- structure(c('Parti liberal-radical', 'Parti démocrate chrétien', 'Parti socialiste', 'Union démocratique du centre', #
+  'Parti évengélique suisse', 'Parti chrétien social', 'Vert libéraux', 'Parti bourgeois-démocratique', 'Parti suisse du travail', #
+  'Les Verts', 'Union démocratique du centre', 'Lega dei Ticinesi', 'Mouvement citoyens romands'), names =#
+  c('PLR', 'PDC', 'PS', 'UDC', 'PEV', 'PCS', 'PVL', 'PBD', 'PST', 'PES', 'UDF', 'Lega', 'MCR'))#
+parti <- structure(#
+  c(0.48, 0.07, -0.75, 0.79, 0.4, -0.72, 0.28, 0.62, -1.1, -0.6, -0.92, 1.12, 1.1), #
+  names = c('PLR', 'PDC', 'PS', 'UDC', 'PEV', 'PCS', 'PVL', 'PBD', 'PST', 'PES', 'UDF', 'Lega', 'MCR'))#
+df <- data.frame(x = parti, y = 0.1, names = paste(toLongNames[names(parti)], " (", names(parti), ")", sep=""))#
+ggplot(data = df) + geom_text(aes(x, y, label = names), angle = 90, alpha = 0.8, hjust=0, vjust=0) + ylab("") + scale_y_discrete(breaks=NULL)
+install.packages(c("rgdal", "maptools"))
+install.packages("iWebPlots")
+library(iWebPlots)
+install.packages("geneplotter")
+install.packages("XML")
+install.packages("SVGAnnotation")
+install.packages("iWebPlots")
+library(iWebPlots)
+library(geneplotter)
+install.packages("geneplotter")
+install.packages("svgAnnotation")
+install.packages("SVGAnnotation")
+install.packages("gridSVG")
+library("gridSVG")
+library("ggplot2")
+qplot(disp, mpg, data=mtcars) + facet_wrap(~ cyl)
+grid.ls()
+grobs$name[grobs$type == "grobListing"]
+grobs <- grid.ls()
+names <- grobs$name[grobs$type == "grobListing"]
+names
+}grid.garnish(i,onmouseover=paste("showTooltip(evt, '", i, "')"),             onmouseout="hideTooltip()")for (i in unique(names)) {
+for (i in unique(names)) {
+grid.garnish(i,
+onmouseover=paste("showTooltip(evt, '", i, "')"),
+onmouseout="hideTooltip()")
+}
+grid.script(filename="tooltip.js")
+gridToSVG("qplotbrowser.svg")
+library(rCharts)
+h1 <- hPlot(x = "Wr.Hnd", y = "NW.Hnd", data = MASS::survey, type = c("line", #
+    "bubble", "scatter"), group = "Clap", size = "Age")#
+h1$print("chart5")
+h1 <- hPlot(x = "Wr.Hnd", y = "NW.Hnd", data = MASS::survey, type = c("line", #
+    "bubble", "scatter"), group = "Clap", size = "Age")
+h1
+str(MASS::survey)
+ls(package="XML")
+ls(packages="XML")
+?ls
+ls(packages=XML)
+ls(package="XML")
+?ls
+ls(list(package=xml))
+ls(list(package="XML"))
+library(XML)
+?xmlParseDoc
+setwd('/Users/duc/sandbox/www/d3-worldmap-boilerplate')
+names <- read.csv("data/countrynames.txt")
+?read.csv
+setwd('/Users/duc/sandbox/www/d3-worldmap-boilerplate')
+names <- read.csv("data/countrynames.txt", skip = 22)
+??read.csv
+setwd('/Users/duc/sandbox/www/d3-worldmap-boilerplate')
+names <- read.csv("data/countrynames.txt", skip = 22, header = F)
+names
+str(names)
+setwd('/Users/duc/sandbox/www/d3-worldmap-boilerplate')
+names <- read.csv2("data/countrynames.txt", skip = 22, header = F)
+str(names)
+setwd('/Users/duc/sandbox/www/d3-worldmap-boilerplate')
+names <- read.csv2("data/countrynames.txt", skip = 22, header = F, stringsAsFactors = FALSE)
+str(names)
+library(maps)
+install.packages(maps)
+install.packages("maps")
+library(maps)
+names
+setwd('/Users/duc/sandbox/www/d3_chorepleth_dev')
+inputFile <- 'data/ny.gdp.pcap.cd_Indicator_en_csv_v2.csv'#
+nSkip <- 2#
+header <- T#
+#
+data <- read.csv2(inputFile, skip = nSkip, header = header, stringsAsFactors = FALSE)
+data
+str(data)
+setwd('/Users/duc/sandbox/www/d3_chorepleth_dev')
+data <- read.csv(inputFile, skip = nSkip, header = header, stringsAsFactors = FALSE)
+str(data)
+setwd('/Users/duc/sandbox/www/d3_chorepleth_dev')
+inputFile <- 'data/ny.gdp.pcap.cd_Indicator_en_csv_v2.csv'#
+nSkip <- 2#
+header <- T#
+#
+data <- read.csv(inputFile, skip = nSkip, header = header, stringsAsFactors = FALSE)
+str(data)
+colnames(data)
+setwd('/Users/duc/sandbox/www/d3_chorepleth_dev')
+data <- read.csv(inputFile, skip = nSkip, header = header,
+)
+str(data)
+setwd('/Users/duc/sandbox/www/d3_chorepleth_dev')
+inputFile <- 'data/ny.gdp.pcap.cd_Indicator_en_csv_v2.csv'#
+nSkip <- 2#
+header <- T#
+#
+data <- read.csv(inputFile, skip = nSkip, header = header, stringsAsFactors = FALSE)
+colnames(data)
+setwd('/Users/duc/sandbox/www/d3_chorepleth_dev')
+inputFile <- 'data/ny.gdp.pcap.cd_Indicator_en_csv_v2.csv'#
+nSkip <- 2#
+header <- T#
+colSubset <- c(1:2, 57)#
+#
+data <- read.csv(inputFile, skip = nSkip, header = header, stringsAsFactors = FALSE)[,colSubset]
+data
+setwd('/Users/duc/sandbox/www/d3_chorepleth_dev')
+inputFile <- 'data/countrynames.txt'#
+nSkip <- 22#
+names <- read.csv2("inputFile", skip = 22, header = F, stringsAsFactors = FALSE)
+setwd('/Users/duc/sandbox/www/d3_chorepleth_dev')
+get the country id code#
+inputFile <- 'data/countrynames.txt'#
+nSkip <- 22#
+names <- read.csv2(inputFile, skip = 22, header = F, stringsAsFactors = FALSE)
+names
+setwd('/Users/duc/sandbox/www/d3_chorepleth_dev')
+names <- read.csv2(inputFile, skip = 22, header = F, stringsAsFactors = FALSE)[,2:3]
+names
+str(data)
+str(data)
+setwd('/Users/duc/sandbox/www/d3_chorepleth_dev')
+data$`Country.Code`
+str(names)
+names[,1]
+setwd('/Users/duc/sandbox/www/d3_chorepleth_dev')
+match(data$`Country.Code`, names[,1])
+setwd('/Users/duc/sandbox/www/d3_chorepleth_dev')
+match(data$`Country.Code`, gsub("^ ", "", names[,1]))
+setwd('/Users/duc/sandbox/www/d3_chorepleth_dev')
+match(gsub("^ ", "", names[,1]), data$`Country.Code`)
+setwd('/Users/duc/sandbox/www/d3_chorepleth_dev')
+idx <- match(data$`Country.Code`, gsub("^ ", "", names[,1]))
+idx
+data$`Country.Code`
+names[,1]
+setwd('/Users/duc/sandbox/www/d3_chorepleth_dev')
+data$`Country.Code`[which(is.na(idx))]
+gsub("^ ", "", names[,1])
+data[which(is.na(idx))]
+data[which(is.na(idx)),]
+data[which(is.na(idx)),]
+setwd('/Users/duc/sandbox/www/d3_chorepleth_dev')
+inputFile <- 'data/ny.gdp.pcap.cd_Indicator_en_csv_v2.csv'#
+nSkip <- 2#
+header <- T#
+colSubset <- c(1:2, 57)#
+#
+data <- read.csv(inputFile, skip = nSkip, header = header, stringsAsFactors = FALSE)[,colSubset]#
+## get the country id code#
+inputFile <- 'data/countrynames.txt'#
+nSkip <- 22#
+names <- read.csv2(inputFile, skip = 22, header = F, stringsAsFactors = FALSE)[,2:3]#
+#
+## bind the id code to the data#
+idx <- match(data$`Country.Code`, gsub("^ ", "", names[,1]))#
+#
+if(any(is.na(idx))){ #
+  warning("some data could not be matched!")#
+}
+?warning
+setwd('/Users/duc/sandbox/www/d3_chorepleth_dev')
+warning("some data could not be matched!", data[which(is.na(idx)),])
+setwd('/Users/duc/sandbox/www/d3_chorepleth_dev')
+if(any(is.na(idx))){ #
+  warning("some data could not be matched!\n\n", data[which(is.na(idx)),])#
+}
+setwd('/Users/duc/sandbox/www/d3_chorepleth_dev')
+inputFile <- 'data/ny.gdp.pcap.cd_Indicator_en_csv_v2.csv'#
+nSkip <- 2#
+header <- T#
+colSubset <- c(1:2, 57)#
+#
+data <- read.csv(inputFile, skip = nSkip, header = header, stringsAsFactors = FALSE)[,colSubset]#
+## get the country id code#
+inputFile <- 'data/countrynames.txt'#
+nSkip <- 22#
+names <- read.csv2(inputFile, skip = 22, header = F, stringsAsFactors = FALSE)[,2:3]#
+names[,1] <- gsub("^ ", "", names[,1])#
+#
+## bind the id code to the data#
+idx <- match(data$`Country.Code`,names[,1])#
+#
+if(any(is.na(idx))){ #
+  warning("some data could not be matched!\n\n", data[which(is.na(idx)),])#
+}
+data
+names
+names[idx, 1]
+setwd('/Users/duc/sandbox/www/d3_chorepleth_dev')
+data$id <- names[idx, 1]
+data$id
+which(is.na(idx))
+data[which(is.na(idx)),]
+names[,1]
+dayta
+data
+setwd('/Users/duc/sandbox/www/d3_chorepleth_dev')
+inputFile <- 'data/ny.gdp.pcap.cd_Indicator_en_csv_v2.csv'#
+nSkip <- 2#
+header <- T#
+colSubset <- c(1:2, 57)#
+#
+data <- read.csv(inputFile, skip = nSkip, header = header, stringsAsFactors = FALSE)[,colSubset]#
+## get the country id code#
+inputFile <- 'data/countrynames.txt'#
+nSkip <- 22#
+names <- read.csv2(inputFile, skip = 22, header = F, stringsAsFactors = FALSE)[,2:3]#
+names[,1] <- gsub("^ ", "", names[,1])#
+#
+## bind the id code to the data#
+idx <- match(data$`Country.Code`,names[,1])#
+#
+if(any(is.na(idx))){ #
+  warning("some data could not be matched!\n\n", data[which(is.na(idx)),])#
+}#
+#
+data$id <- names[idx, 2]#
+# discard rows without id
+data
+setwd('/Users/duc/sandbox/www/d3_chorepleth_dev')
+data[which(!is.na(data[,3]) & !is.na(data[,4])),]
+setwd('/Users/duc/sandbox/www/d3_chorepleth_dev')
+data <- data[which(!is.na(data[,3]) & !is.na(data[,4])),]
+data
+str(data)
+data
+setwd('/Users/duc/sandbox/www/d3_chorepleth_dev')
+inputFile <- 'data/ny.gdp.pcap.cd_Indicator_en_csv_v2.csv'#
+nSkip <- 2#
+header <- T#
+colSubset <- c(1:2, 57)#
+mappingIdFile <- 'data/countrynames.txt'#
+outputFile <- "data/gdp2012.csv"#
+data <- read.csv(inputFile, skip = nSkip, header = header, stringsAsFactors = FALSE)[,colSubset]#
+## get the country id code#
+#
+names <- read.csv2(mappingIdFile, skip = 22, header = F, stringsAsFactors = FALSE)[,2:3]#
+names[,1] <- gsub("^ ", "", names[,1])#
+#
+## bind the id code to the data#
+idx <- match(data$`Country.Code`,names[,1])#
+#
+if(any(is.na(idx))){ #
+  warning("some data could not be matched!\n\n", data[which(is.na(idx)),])#
+}#
+#
+data$id <- names[idx, 2]#
+# discard rows with NA values or NA id#
+data <- data[which(!is.na(data[,3]) & !is.na(data[,4])),]
+data
+order(data$id)
+data[order(data$id),]
+setwd('/Users/duc/sandbox/www/d3_chorepleth_dev')
+write.csv(data[order(data$id),], file = outputFile, sep ="\\t")
+setwd('/Users/duc/sandbox/www/d3_chorepleth_dev')
+write.csv(data[order(data$id),], file = outputFile, sep ="\t")
+setwd('/Users/duc/sandbox/www/d3_chorepleth_dev')
+save the data#
+write.csv(data[order(data$id),], file = outputFile, sep ="\\t")
+setwd('/Users/duc/sandbox/www/d3_chorepleth_dev')
+write.table(data[order(data$id),], file = outputFile, sep ="\\t")
+setwd('/Users/duc/sandbox/www/d3_chorepleth_dev')
+inputFile <- 'data/ny.gdp.pcap.cd_Indicator_en_csv_v2.csv'#
+nSkip <- 2#
+header <- T#
+colSubset <- c(1:2, 57)#
+mappingIdFile <- 'data/countrynames.txt'#
+outputFile <- "data/gdp2012.tsv"#
+data <- read.csv(inputFile, skip = nSkip, header = header, stringsAsFactors = FALSE)[,colSubset]#
+## get the country id code#
+#
+names <- read.csv2(mappingIdFile, skip = 22, header = F, stringsAsFactors = FALSE)[,2:3]#
+names[,1] <- gsub("^ ", "", names[,1])#
+#
+## bind the id code to the data#
+idx <- match(data$`Country.Code`,names[,1])#
+#
+if(any(is.na(idx))){ #
+  warning("some data could not be matched!\n\n", data[which(is.na(idx)),])#
+}#
+#
+data$id <- names[idx, 2]#
+# discard rows with NA values or NA id#
+data <- data[which(!is.na(data[,3]) & !is.na(data[,4])),]#
+# save the data#
+write.table(data[order(data$id),], file = outputFile, sep ="\t")
+colnames(data)
+setwd('/Users/duc/sandbox/www/d3_chorepleth_dev')
+inputFile <- 'data/ny.gdp.pcap.cd_Indicator_en_csv_v2.csv'#
+nSkip <- 2#
+header <- T#
+colSubset <- c(1:2, 57)#
+mappingIdFile <- 'data/countrynames.txt'#
+outputFile <- "data/gdp2012.tsv"#
+data <- read.csv(inputFile, skip = nSkip, header = header, stringsAsFactors = FALSE)[,colSubset]#
+## get the country id code#
+#
+names <- read.csv2(mappingIdFile, skip = 22, header = F, stringsAsFactors = FALSE)[,2:3]#
+names[,1] <- gsub("^ ", "", names[,1])#
+#
+## bind the id code to the data#
+idx <- match(data$`Country.Code`,names[,1])#
+#
+if(any(is.na(idx))){ #
+  warning("some data could not be matched!\n\n", data[which(is.na(idx)),])#
+}#
+#
+data$id <- names[idx, 2]#
+# discard rows with NA values or NA id#
+data <- data[which(!is.na(data[,3]) & !is.na(data[,4])),]#
+#
+# reformat data#
+data <- data[order(data$id),]#
+colnames(data) <- c('name', 'iso3alpha', 'value', 'id')#
+#
+# save the data#
+write.table(data, file = outputFile, sep ="\t")
+rownames(data)
+setwd('/Users/duc/sandbox/www/d3_chorepleth_dev')
+inputFile <- 'data/ny.gdp.pcap.cd_Indicator_en_csv_v2.csv'#
+nSkip <- 2#
+header <- T#
+colSubset <- c(1:2, 57)#
+mappingIdFile <- 'data/countrynames.txt'#
+outputFile <- "data/gdp2012.tsv"#
+data <- read.csv(inputFile, skip = nSkip, header = header, stringsAsFactors = FALSE)[,colSubset]#
+## get the country id code#
+#
+names <- read.csv2(mappingIdFile, skip = 22, header = F, stringsAsFactors = FALSE)[,2:3]#
+names[,1] <- gsub("^ ", "", names[,1])#
+#
+## bind the id code to the data#
+idx <- match(data$`Country.Code`,names[,1])#
+#
+if(any(is.na(idx))){ #
+  warning("some data could not be matched!\n\n", data[which(is.na(idx)),])#
+}#
+#
+data$id <- names[idx, 2]#
+# discard rows with NA values or NA id#
+data <- data[which(!is.na(data[,3]) & !is.na(data[,4])),]#
+#
+# reformat data#
+data <- data[order(data$id),]#
+colnames(data) <- c('name', 'iso3alpha', 'value', 'id')#
+rownames(data) <- NULL#
+# save the data#
+write.table(data, file = outputFile, sep ="\t")
+rownames(data)
+rownames(data) <- NULL
+rownames(data)
+rownames(data) <- NULL
+rownames(data)
+setwd('/Users/duc/sandbox/www/d3_chorepleth_dev')
+inputFile <- 'data/ny.gdp.pcap.cd_Indicator_en_csv_v2.csv'#
+nSkip <- 2#
+header <- T#
+colSubset <- c(1:2, 57)#
+mappingIdFile <- 'data/countrynames.txt'#
+outputFile <- "data/gdp2012.tsv"#
+data <- read.csv(inputFile, skip = nSkip, header = header, stringsAsFactors = FALSE)[,colSubset]#
+## get the country id code#
+#
+names <- read.csv2(mappingIdFile, skip = 22, header = F, stringsAsFactors = FALSE)[,2:3]#
+names[,1] <- gsub("^ ", "", names[,1])#
+#
+## bind the id code to the data#
+idx <- match(data$`Country.Code`,names[,1])#
+#
+if(any(is.na(idx))){ #
+  warning("some data could not be matched!\n\n", data[which(is.na(idx)),])#
+}#
+#
+data$id <- names[idx, 2]#
+# discard rows with NA values or NA id#
+data <- data[which(!is.na(data[,3]) & !is.na(data[,4])),]#
+#
+# reformat data#
+data <- data[order(data$id),]#
+colnames(data) <- c('name', 'iso3alpha', 'value', 'id')#
+#
+# save the data#
+write.table(data, file = outputFile, sep ="\t",  row.names = FALSE)
+ls()
